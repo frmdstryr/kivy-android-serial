@@ -8,7 +8,7 @@ License MIT
 
 @author: frmdstryr@gmail.com
 '''
-from serialandroid import CdcAcmSerialPort
+from kvserial.driver import CdcAcmSerialPort
 from serial.serialutil import SerialException, SerialTimeoutException
 from twisted.internet.serialport import SerialPort as SerialBase
 from twisted.internet.main import CONNECTION_DONE, CONNECTION_LOST
