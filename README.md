@@ -26,4 +26,28 @@ android.manifest.intent_filters = intent-filter.xml
 
 ### Usage
 
-Use like you would use `serial.Serial`.  A non-blocking implementation for use with twisted is included. 
+Use like you would use `serial.Serial`.   
+
+```python
+
+from kvserial.driver import CdcAcmSerialPort
+
+s = CdcAcmSerialPort('/dev/ttyACM0')
+s.write("Hello\n")
+# etc...
+
+```
+
+A non-blocking implementation for use with twisted is included.
+
+```python
+
+from kvserial.twisted  import SerialPort
+
+s = SerialPort(protocol,'/dev/ttyACM0',reactor)
+
+# handle in protocol...
+
+```
+
+
